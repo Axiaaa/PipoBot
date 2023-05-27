@@ -85,6 +85,6 @@ async def info(ctx : SlashContext):
 
     
         
-bot.start("MTExMTc1NjA1ODkwMjQwOTMyNw.GxoY3U.r-sV9ydUaGSFlQQM5hhhvc4ScY-8fHVU-rscnU")
+bot.start("token")
 
 
