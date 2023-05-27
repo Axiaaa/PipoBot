@@ -1,5 +1,4 @@
 discord-py-interactions
-random
 asyncio
 os
 
