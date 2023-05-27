@@ -1,4 +1,4 @@
-import interactions, random, asyncio
+import interactions, random, asyncio, os
 from interactions import *
 
 bot = interactions.Client(intents=interactions.Intents.ALL)
@@ -85,6 +85,5 @@ async def info(ctx : SlashContext):
 
     
         
-bot.start("token")
-
+bot.start(os.environ["TOKEN"])
 
