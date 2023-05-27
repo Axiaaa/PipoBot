@@ -1,2 +1,3 @@
-discord-py-interactions
 python3.10
+discord-py-interactions
+
