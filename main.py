@@ -195,6 +195,6 @@ async def button_ciseaux(event):
 
 
 
-bot.start("MTExMTc1NjA1ODkwMjQwOTMyNw.Gv71V0.QBFDvtnAC_Ln994FZ6MK3I1fV0glQiDc2PCXTY")
+bot.start("TOKEN")
 
 
