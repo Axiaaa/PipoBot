@@ -1,5 +1,5 @@
 # PipoBot
-###Un bot simple, créé suite à la demande d'une amis pour être rigolo et facile d'utiliser. 
+### Un bot simple, créé suite à la demande d'une amis pour être rigolo et facile d'utiliser. 
 Convient uniquement dans une utilisation "fun" & "chill" mais ne convient pas à la modération. 
 
 Si vous utilisez des parties de mon code pour quoi que ce sont, on oublie pas de créditer, merci ! 😊👌
