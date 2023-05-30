@@ -25,7 +25,7 @@ Pour lancer votre propre version de PipoBot, assurez-vous d'avoir au moins Pytho
 
 4. Modifiez le token dans le fichier main.py avec votre propre token Discord.
 
-5. Lancez le bot en exécutant le fichier main.py :
+5. Lancez le bot en exécutant le fichier [main.py](https://github.com/Axiaaa/PipoBot/blob/main/main.py#L21) :
   
   ```python3 main.py```
 
