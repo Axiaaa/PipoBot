@@ -5,7 +5,7 @@ import datetime
 
 class Serverinfo(Extension):
 
-    @slash_command(name="serverinfo", description="Affiche les informations du serveur")
+    @slash_command(name="serveurinfo", description="Affiche les informations du serveur")
     async def serverinfo(self, ctx : InteractionContext):
         embed = Embed(title="Informations du serveur", color=0x00ff00, thumbnail=EmbedAttachment(url=ctx.guild.icon.url))   
         embed.add_field(name="Nom du serveur", value=ctx.guild.name, inline=True)
