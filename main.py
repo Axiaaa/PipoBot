@@ -18,4 +18,4 @@ load_extensions(bot, "commandes", "commandes.")
 load_extensions(bot, "utils", "utils.")
 
 
-bot.start("MTExMTc1NjA1ODkwMjQwOTMyNw.Gv71V0.QBFDvtnAC_Ln994FZ6MK3I1fV0glQiDc2PCXTY")
+bot.start("TOKEN")
