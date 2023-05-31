@@ -18,4 +18,4 @@ load_extensions(bot, "commandes", "commandes.")
 load_extensions(bot, "utils", "utils.")
 
 
-bot.start("TOKEN")
+bot.start(os.environ["TOKEN"])
