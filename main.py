@@ -8,24 +8,26 @@ bot = Client(intents=Intents.ALL)
 
 @listen()
 async def on_startup():
-    print("Bot is ready!")
-    while True:
-            random_activity = randint(1, 2)
-            if random_activity == 1:
-                await bot.change_presence(
-                    activity=Activity(
-                        name="games",
-                        type=ActivityType.PLAYING,
-                    )
+  print("Bot is ready")
+  while True:
+        random_activity = randint(1, 2)
+        if random_activity == 1:
+            await bot.change_presence(
+                status= Status.ONLINE,
+                activity= Activity(
+                    type= ActivityType.WATCHING,
+                    name= f"{len(bot.guilds)} serveurs"
                 )
-            elif random_activity == 2:
-                await bot.change_presence(
-                    activity=Activity(
-                        name="a movie",
-                        type=ActivityType.WATCHING,
-                    )
                 )
-            await asyncio.sleep(60)
+        elif random_activity == 2:
+            await bot.change_presence(
+                status= Status.ONLINE,
+                activity= Activity (
+                    type= ActivityType.WATCHING,
+                    name= f"You"
+                    ) 
+                )
+        await asyncio.sleep(60)
 
 
 def load_extensions(bot, folder, prefix="", exclude_files=[]):
