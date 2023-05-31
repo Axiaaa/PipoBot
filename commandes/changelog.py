@@ -2,7 +2,9 @@ from interactions import *
 
 
 class Changelog(Extension):
-
+    
+    
+    @is_owner()
     @slash_command(name="bot_changelog", description="Ajoute un changelog pour le bot", default_member_permissions=Permissions.ADMINISTRATOR)
     async def bot_changelog(self, ctx: SlashContext):
         my_modal = Modal(
