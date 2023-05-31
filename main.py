@@ -1,6 +1,8 @@
 from interactions import * 
 import os
+from keep_alive import keep_alive
 
+keep_alive()
 bot = Client(intents=Intents.ALL)
 
 @listen()
