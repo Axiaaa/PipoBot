@@ -13,16 +13,16 @@ async def on_startup():
             random_activity = randint(1, 2)
             if random_activity == 1:
                 await bot.change_presence(
-                    activity=inter.Activity(
+                    activity=Activity(
                         name="games",
-                        type=inter.ActivityType.PLAYING,
+                        type=ActivityType.PLAYING,
                     )
                 )
             elif random_activity == 2:
                 await bot.change_presence(
-                    activity=inter.Activity(
+                    activity=Activity(
                         name="a movie",
-                        type=inter.ActivityType.WATCHING,
+                        type=ActivityType.WATCHING,
                     )
                 )
             await asyncio.sleep(60)
