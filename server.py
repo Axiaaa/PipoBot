@@ -21,7 +21,6 @@ def start():
 start()
 
 def keep_alive():
-    t = Thread(target=run)
-    t.keep_alive()
-    
+    start()
+
    #Credit to Larss_J#8982
