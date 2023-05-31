@@ -1,6 +1,7 @@
 from interactions import * 
-import os
+import os, asyncio
 from server import keep_alive
+from random import randint
 
 keep_alive()
 bot = Client(intents=Intents.ALL)
@@ -8,7 +9,23 @@ bot = Client(intents=Intents.ALL)
 @listen()
 async def on_startup():
     print("Bot is ready!")
-    await bot.change_presence(status=Status.AFK, activity=Activity(name="la drogue", type=ActivityType.GAME))
+    while True:
+            random_activity = randint(1, 2)
+            if random_activity == 1:
+                await bot.change_presence(
+                    activity=inter.Activity(
+                        name="games",
+                        type=inter.ActivityType.PLAYING,
+                    )
+                )
+            elif random_activity == 2:
+                await bot.change_presence(
+                    activity=inter.Activity(
+                        name="a movie",
+                        type=inter.ActivityType.WATCHING,
+                    )
+                )
+            await asyncio.sleep(60)
 
 
 def load_extensions(bot, folder, prefix="", exclude_files=[]):
