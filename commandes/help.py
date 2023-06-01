@@ -5,6 +5,15 @@ class Help(Extension):
     
     @slash_command(name="help", description="Affiche toutes les commandes disponibles")
     async def help(self, ctx : InteractionContext):
+        """
+        Affiche toutes les commandes disponibles
+
+        Args:
+            ctx (InteractionContext): Le contexte
+
+        Returns:
+            None
+        """
         help = Embed(
             title="Voici la liste de toutes les commandes disponibles",
             footer=EmbedFooter(text="Bot créé par Nephtys#4243, à contacter si besoin.", icon_url=self.bot.user.avatar_url))  

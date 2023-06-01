@@ -7,6 +7,17 @@ class Userinfo(Extension):
     @slash_command(name="userinfo", description="Affiche les informations d'un utilisateur")
     @slash_option(name="user", description="L'utilisateur dont vous voulez voir les informations", opt_type=OptionType.USER )
     async def userinfo(self, ctx : InteractionContext, user : Member     = None):
+        """
+        Affiche les informations d'un utilisateur
+
+        Args:
+            ctx (InteractionContext): Le contexte
+            user (Member, optional): L'utilisateur. Defaults to None.
+        
+        Returns:
+            None
+        """
+
         if user is None:
             user = ctx.author
         embed = Embed(title="Informations de l'utilisateur", color=0x00ff00)   

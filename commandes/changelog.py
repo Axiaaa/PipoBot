@@ -10,6 +10,15 @@ class Changelog(Extension):
     @check(check=owner_check)
     @slash_command(name="bot_changelog", description="Ajoute un changelog pour le bot", default_member_permissions=Permissions.ADMINISTRATOR)
     async def bot_changelog(self, ctx: SlashContext):
+        """
+        Ajoute un changelog pour le bot
+
+        Args:
+            ctx (SlashContext): Le contexte
+
+        Returns:
+            None
+        """
         my_modal = Modal(
         ShortText(label="Version",
                     custom_id="version",

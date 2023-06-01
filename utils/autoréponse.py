@@ -6,6 +6,15 @@ class Autoréponse(Extension):
 
     @listen()
     async def on_message_create(self, event):
+        """
+        Répond automatiquement à certains messages
+
+        Args:
+            event (discord.Message): Le message
+
+        Returns:
+            None
+        """
         x = event.message.content.lower()
         if event.message.author.id != 1111756058902409327: 
             if "quoi" in x: 

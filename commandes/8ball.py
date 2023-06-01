@@ -48,13 +48,24 @@ class Eightball(Extension):
     @slash_command(name="8ball", description="Pose une question à la boule magique")
     @slash_option(name="question", description="La question que vous voulez poser", opt_type=OptionType.STRING, required=True)
     async def eightball(self, ctx : InteractionContext, question : str):
+            
+        """
+        Pose une question à la boule magique
 
-            embed = Embed(title=":8ball: 8ball",color=0x00ff00)
-            embed.add_field(name="Question", value=question, inline=True)
-            embed.add_field(name="Réponse", value=random.choice(self.responses))
-            embed.set_footer(text=f"Posée par {ctx.author.display_name}", icon_url=ctx.author.avatar.url)
-            embed.timestamp = datetime.datetime.utcnow()
-            await ctx.send(embed=embed)
+        Args:
+            ctx (InteractionContext): Le contexte
+            question (str): La question que vous voulez poser
+
+        Returns:
+            None
+        """
+
+        embed = Embed(title=":8ball: 8ball",color=0x00ff00)
+        embed.add_field(name="Question", value=question, inline=True)
+        embed.add_field(name="Réponse", value=random.choice(self.responses))
+        embed.set_footer(text=f"Posée par {ctx.author.display_name}", icon_url=ctx.author.avatar.url)
+        embed.timestamp = datetime.datetime.utcnow()
+        await ctx.send(embed=embed)
 
 
 

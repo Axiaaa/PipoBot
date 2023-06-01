@@ -10,6 +10,16 @@ class Gay(Extension):
         required=False,
         opt_type=OptionType.USER)
     async def gay(self, ctx : InteractionContext, utilisateur : Member = None):
+        """
+        Affiche le gaymeter d'un utilisateur
+
+        Args:
+            ctx (InteractionContext): Le contexte
+            utilisateur (Member, optional): L'utilisateur à tester. Defaults to None.
+        
+        Returns:
+            None
+        """
         if utilisateur == None : 
             utilisateur = ctx.author
         embed=Embed(

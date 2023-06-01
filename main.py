@@ -31,6 +31,18 @@ async def on_startup():
 
 
 def load_extensions(bot, folder, prefix="", exclude_files=[]):
+    """
+    Charge les extensions du bot
+
+    Args:
+        bot (discord.ext.commands.Bot): Le bot
+        folder (str): Le dossier contenant les extensions
+        prefix (str, optional): Le préfixe des extensions. Defaults to "".
+        exclude_files (list, optional): Les fichiers à exclure. Defaults to [].
+    
+    Returns:
+        None
+    """
     extensions = [file.replace(".py", "") for file in os.listdir(folder) if file.endswith(".py") and file not in exclude_files]
     for ext in extensions:
         bot.load_extension(f"{prefix}{ext}")

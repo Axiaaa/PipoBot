@@ -79,6 +79,15 @@ vérités = [
 class AouV(Extension):
     @slash_command(name="action_ou_verite", description="Joue à Action ou Vérité")
     async def aouv(self, ctx: InteractionContext):
+        """
+        Joue à Action ou Vérité
+
+        Args:
+            ctx (InteractionContext): [description]
+
+        Returns:
+            None 
+        """
         embed=Embed(
             title="Action ou Vérité ?"
         )

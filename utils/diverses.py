@@ -9,7 +9,17 @@ class Utiles(Extension):
                 description="Nom",
                 required=True,
                 opt_type=OptionType.ROLE)
-    async def supprimer_role(self,ctx : SlashContext, role_name = Role):        
+    async def supprimer_role(self,ctx : SlashContext, role_name = Role):
+        """
+        Supprime un rôle
+
+        Args:
+            ctx (SlashContext): Le contexte
+            role_name (Role): Le rôle à supprimer
+
+        Returns:
+            None
+        """        
         await role_name.delete()
         await ctx.send(f"Le rôle ``{role_name.name}`` a bien été supprimé !", ephemeral=True)
         
@@ -21,7 +31,17 @@ class Utiles(Extension):
         description="Nom du salon",
         required=True,
         opt_type=OptionType.CHANNEL)
-    async def supprimer_salon(self, ctx : SlashContext, channel_nom : GuildChannel):       
+    async def supprimer_salon(self, ctx : SlashContext, channel_nom : GuildChannel):
+        """
+        Supprime un salon
+
+        Args:
+            ctx (SlashContext): Le contexte
+            channel_nom (GuildChannel): Le salon à supprimer
+        
+        Returns:
+            None
+        """      
         if channel_nom == ctx.channel:
             await ctx.send("Vous ne pouvez pas supprimer ce salon !", ephemeral=True)
             return
@@ -43,6 +63,17 @@ class Utiles(Extension):
         required=False,
         opt_type=OptionType.USER)
     async def change_pseudo(self, ctx : SlashContext, pseudo : str, utilisateur : Member = None):
+        """
+        Change le pseudo d'un membre
+
+        Args:
+            ctx (SlashContext): Le contexte
+            pseudo (str): Le nouveau pseudo
+            utilisateur (Member, optional): L'utilisateur. Defaults to None.
+        
+        Returns:
+            None
+        """
         if utilisateur == None : 
             utilisateur = ctx.author
         await utilisateur.edit_nickname(new_nickname=pseudo)
@@ -57,6 +88,16 @@ class Utiles(Extension):
         max_value=50,
         opt_type=OptionType.INTEGER)
     async def clear(self, ctx : SlashContext, nombre_messages : int):
+        """
+        Supprime un nombre de messages
+
+        Args:
+            ctx (SlashContext): Le contexte
+            nombre_messages (int): Le nombre de messages à supprimer
+        
+        Returns: 
+            None
+        """
         await ctx.channel.purge(nombre_messages)
         await ctx.send(f"Les {nombre_messages} derniers messages ont bien été supprimés", ephemeral=True)
         

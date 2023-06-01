@@ -7,6 +7,15 @@ class Serverinfo(Extension):
 
     @slash_command(name="serveurinfo", description="Affiche les informations du serveur")
     async def serverinfo(self, ctx : InteractionContext):
+        """
+        Affiche les informations du serveur
+
+        Args:
+            ctx (InteractionContext): Le contexte
+
+        Returns:
+            None
+        """
         embed = Embed(title="Informations du serveur", color=0x00ff00, thumbnail=EmbedAttachment(url=ctx.guild.icon.url))   
         embed.add_field(name="Nom du serveur", value=ctx.guild.name, inline=True)
         embed.add_field(name="Nombre de membres", value=ctx.guild.member_count, inline=True)

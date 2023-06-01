@@ -3,6 +3,15 @@ from random import choice
 
 
 def PierreFeuilleCiseaux(choix: str):
+        """
+        Fait une partie de pierre feuille ciseaux
+
+        Args:
+            choix (str): Le choix du joueur
+
+        Returns:
+            str: Le résultat de la partie
+        """
         x = choice(["pierre", "papier", "ciseaux"])
         if (x == "pierre" and choix == "papier") or (x == "papier" and choix == "ciseaux") or (x == "ciseaux" and choix == "pierre"):
             return "w"
@@ -15,6 +24,15 @@ class Shifumi(Extension):
 
     @slash_command(name="shifumi", description="Lance une partie de shifumi contre le bot")
     async def shifumi(self, ctx: InteractionContext):
+        """
+        Lance une partie de shifumi contre le bot
+
+        Args:
+            ctx (InteractionContext): Le contexte
+        
+        Returns:
+            None
+        """
         buttons : list[ActionRow] = [
         ActionRow(
             Button(

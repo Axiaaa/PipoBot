@@ -4,6 +4,15 @@ class Info(Extension):
 
     @slash_command(name="info", description="Affiche les informations du bot")
     async def info(self, ctx : InteractionContext):
+            """
+            Affiche les informations du bot
+
+            Args:
+                ctx (InteractionContext): Le contexte
+            
+            Returns:
+                None
+            """
             try : 
                 embed = Embed(title="Informations du bot", color=Color.from_hex("#FF0000"))
                 embed.add_field(name="Développé en", value="Python, avec [interactions.py (v5)](https://github.com/interactions-py/interactions.py)", inline=True)
