@@ -23,7 +23,7 @@ Pour lancer votre propre version de PipoBot, assurez-vous d'avoir au moins Pytho
   
   ```pip install -r requirements.txt```
 
-4. Modifiez le token dans le fichier [main.py](https://github.com/Axiaaa/PipoBot/blob/main/main.py#L21) avec votre propre token Discord.
+4. Modifiez le token dans le fichier [main.py](https://github.com/Axiaaa/PipoBot/blob/main/main.py#L54) avec votre propre token Discord.
 
 5. Lancez le bot en exécutant le fichier [main.py](https://github.com/Axiaaa/PipoBot/blob/main/main.py) :
   
